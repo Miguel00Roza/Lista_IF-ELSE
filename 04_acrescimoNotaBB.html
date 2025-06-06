@@ -1,0 +1,18 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ACRÉSCIMO DE NOTA NO PROGRAMA BB
+    Um professor instituiu o programa BB na sua disciplina. Nesse programa, um aluno com notas melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
+    */
+
+    //ENTRADA
+    const nota1 = Number(prompt("Informe a nota antes da ajuda"));
+    const nota2 = Number(prompt("Informe a nota depois da ajuda"));
+    //PROCESSAMENTO && SAIDA
+    if (nota2 > nota1) {
+        const acrescimo = (nota2 - nota1) / 4
+        document.write(`o acresimo do big brother é de ${acrescimo} pontos`);
+    } else {
+        document.write(`O little brother não obteve ganhos`);
+    }
+</script>

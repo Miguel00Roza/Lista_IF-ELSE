@@ -1,0 +1,49 @@
+<script>
+    /*
+    PROBLEMA: ORDEM DECRESCENTE
+    Faça um script que leia três números e mostre-os em ordem decrescente.
+    */
+
+    //ENTRADA
+    const a = Number(prompt("Informe o numero 1"));
+    const b = Number(prompt("Informe o numero 2"));
+    const c = Number(prompt("Informe o numero 3"));
+    
+    //PROCESSAMENTO
+    let maior = 0;
+    let meio = 0;
+    let ultimo = 0;
+    if (a > b && a > c) {
+        maior = a;
+        if (b > c) {
+            meio = b;
+            ultimo = c;
+        } else {
+            meio = c;
+            ultimo = b;
+        }
+    } 
+    if (b > a && b > c) {
+        maior = b;
+        if (a > c) {
+            meio = a;
+            ultimo = c;
+        } else {
+            meio = c;
+            ultimo = a;
+        }
+    } 
+    if (c > b && c > a) {
+        maior = c;
+        if (b > a) {
+            meio = b;
+            ultimo = a;
+        } else {
+            meio = a;
+            ultimo = b;
+        }
+    }
+
+    //SAÍDA
+    alert(`A ordem dos numeros é ${maior} ${meio} ${ultimo}`)
+</script>
