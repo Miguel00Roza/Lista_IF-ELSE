@@ -1,0 +1,21 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ANO BISSEXTO
+    Recebe um ano e informa se ele é bissexto ou não.
+    */
+
+    //ENTRADA
+    const ano = Number(prompt("Insira um ano"))
+    
+    //PROCESSAMENTO
+    let resultado = ""
+    if (Number.isInteger(ano / 4)) {
+        resultado = "ano bissexto"
+    } else {
+        resultado = "ano normal"
+    }
+    
+    //SAÍDA
+    document.write(`O ano ${ano} é um ${resultado}`)
+</script>

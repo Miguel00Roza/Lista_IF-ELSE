@@ -8,11 +8,46 @@
     */
 
     //ENTRADA
-    
-
+    const numero1 = Number(prompt("Digite o numero 1:"));
+    const numero2 = Number(prompt("Digite o numero 2:"));
+    const operacao = prompt("Digite a operação que deseja fazer, + = adição, - = subtração, * = multiplicação e / = divisão");
     //PROCESSAMENTO
-
-    
+    let resultado = 0;
+    let parImpar = ""
+    let positivoNegativo = ""
+    let inteiroDecimal = ""
+    if (operacao === "+") {
+        resultado = numero1 + numero2
+    }
+    else if (operacao === "-") {
+        resultado = numero1 - numero2
+    }
+    else if (operacao === "*") {
+        resultado = numero1 * numero2
+    }
+    else if (operacao === "/") {
+        resultado = numero1 / numero2
+    } else {
+        alert("Operação invalida")
+    }
+    if (resultado % 2 == 0) {
+        parImpar = "numero par"
+    } else {
+        parImpar = "numero impar"
+    }
+    if (resultado < 0) {
+        positivoNegativo = "numero negativo"
+    } else if (resultado > 0) {
+        positivoNegativo = "numero positivo"
+    } else {
+        positivoNegativo = "numero neutro (0)"
+    }
+    if (Number.isInteger(resultado)) {
+        inteiroDecimal = "numero inteiro"
+    } else {
+        inteiroDecimal = "numero decimal"
+        resultado = resultado.toFixed(2)
+    }
     //SAÍDA
-
+    alert(`O resultado da operação foi = ${resultado}, ele é um ${parImpar}, ${positivoNegativo} e um ${inteiroDecimal}`)
 </script>
