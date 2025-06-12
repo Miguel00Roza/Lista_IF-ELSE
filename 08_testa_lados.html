@@ -8,16 +8,39 @@
     const lado1 = Number(prompt("Informe o lado 1 do triangulo"));
     const lado2 = Number(prompt("Informe o lado 2 do triangulo"));
     const lado3 = Number(prompt("Informe o lado 3 do triangulo"));
-    
-    //PROCESSAMENTO
-    if (lado1 === lado2 === lado3) {
-        document.write("O triangulo é equilatero, todos os lados são iguais")
-    } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-        document.write("O triangulo é isóceles, dois lados são iguais")
-    } else {
-        document.write("O triangulo é escaleno, todos os lados são diferentes")
+
+    let maior = 0;
+    let resultado = 0
+    if (lado1 === lado2 && lado1 === lado3) {
+        resultado = 1;
+    } else if (lado1 >= lado2 && lado1 >= lado3) {
+        maior = lado1;
+        if ( maior <= lado2 + lado3) {
+            resultado = 1;
+        }
+    } else if (lado2 >= lado1 && lado2 >= lado3) {
+        maior = lado2;
+        if ( maior <= lado1 + lado3) {
+            resultado = 1;
+        }
+    } else if (lado3 >= lado1 && lado3 >= lado1) {
+        maior = lado3;
+        if ( maior <= lado1 + lado2) {
+            resultado = 1;
+        }
     }
     
-    //SAÍDA
+    //PROCESSAMENTO
+    if (resultado === 1) {
+        if (lado1 === lado2 && lado1 === lado3) {
+            document.write("O triangulo é equilatero, todos os lados são iguais")
+        } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+            document.write("O triangulo é isóceles, dois lados são iguais")
+        } else {
+            document.write("O triangulo é escaleno, todos os lados são diferentes")
+        }
+    } else {
+    document.write("Isso não é um triangulo")
+    }
 
 </script>
